@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToWatch</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/OOjs_UI_icon_eye.svg/1200px-OOjs_UI_icon_eye.svg.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script type=module src="js/app.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">ToWatch</h1>
+    <p class="header__text">Manage your personal watchlist here and organize videos you'd like to watch later.</p>
+  </header>
+
+  <div class="controls">
+    <form class="search" id="search-form">
+      <label for="search-input"></label><input class="search__input" id="search-input" type="text" placeholder="Search for a Video...">
+      <button class="search__button" type="submit">+</button>
+    </form>
+
+    <form class="filter">
+      <label for="filter-input"></label><input class="filter__input" id="filter-input" type="text" placeholder="Filter entries by:">
+      <label for="filter-type"></label><select class="filter__select" id="filter-type">
+        <option class="filter__option" value="title">Title</option>
+        <option class="filter__option" value="channelTitle">Channel</option>
+      </select>
+    </form>
+  </div>
+
+  <main>
+    <div class="sort">
+      <label for="sort-type"></label><select class="sort__select" id="sort-type">
+      <option class="sort__option" value="date-old-new">Date (Old-New)</option>
+      <option class="sort__option" value="date-new-old">Date (New-Old)</option>
+      <option class="sort__option" value="title-asc">Alphabet (A-Z)</option>
+      <option class="sort__option" value="title-desc">Alphabet (Z-A)</option>
+    </select>
+    </div>
+
+  <ul class="video-list" id="video-list"></ul>
+  </main>
+
+</body>
+</html>
